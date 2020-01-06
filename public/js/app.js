@@ -16,9 +16,11 @@ const fetchLocation = (location, temp = 'us', lang = 'en') => {
       } else {
         messageOne.classList.remove('red')
         const { low, high, summ, temp, rain, degree } = data.forecast
+        console.log(rain)
+        const chance = rain * 100
         const tempType = degree === 'F' ? '℉' : '℃'
         messageOne.textContent = data.location
-        messageTwo.textContent = `${summ} The current temperature is ${temp} ${tempType} with a high of ${high} ${tempType} and a low of ${low} ${tempType}. There is a ${rain} % chance of rain.`
+        messageTwo.textContent = `${summ} The current temperature is ${temp} ${tempType} with a high of ${high} ${tempType} and a low of ${low} ${tempType}. There is a ${chance}% chance of rain.`
       }
     })
   })
