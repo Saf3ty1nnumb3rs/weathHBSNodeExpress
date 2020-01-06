@@ -18,7 +18,7 @@ const fetchLocation = (location, temp = 'us', lang = 'en') => {
         const chance = rain * 100
         const tempType = degree === 'F' ? '℉' : '℃'
         messageOne.textContent = data.location
-        messageTwo.textContent = `${summ} The current temperature is ${temp} ${tempType} with a high of ${high} ${tempType} and a low of ${low} ${tempType}. There is a ${chance}% chance of rain.`
+        messageTwo.textContent = `${summ} The current temperature is ${temp} ${tempType} with a high of ${high} ${tempType} and a low of ${low} ${tempType}. There is a ${chance.toFixed(2)}% chance of rain.`
       }
     })
   })
