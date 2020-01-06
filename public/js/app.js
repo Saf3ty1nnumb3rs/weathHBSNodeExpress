@@ -8,7 +8,7 @@ messageTwo.textContent = ''
 const fetchLocation = (location, temp = 'us', lang = 'en') => {
   if (messageOne.classList.contains('red')) messageOne.classList.remove('red')
   messageOne.textContent = 'Loading...'
-  fetch(`http://localhost:3000/weather?address=${location}&lang=${lang}&temp=${temp}`).then((response) => {
+  fetch(`/weather?address=${location}&lang=${lang}&temp=${temp}`).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         messageOne.textContent = data.error
