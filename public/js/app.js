@@ -1,4 +1,3 @@
-console.log('Client JS loaded!');
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
@@ -16,7 +15,6 @@ const fetchLocation = (location, temp = 'us', lang = 'en') => {
       } else {
         messageOne.classList.remove('red')
         const { low, high, summ, temp, rain, degree } = data.forecast
-        console.log(rain)
         const chance = rain * 100
         const tempType = degree === 'F' ? '℉' : '℃'
         messageOne.textContent = data.location
